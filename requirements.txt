@@ -1,0 +1,5 @@
+pyaudio
+wave
+openai
+flask-cors
+flask
