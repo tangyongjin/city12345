@@ -111,11 +111,16 @@ function stopRecording() {
       });
 
       const { transcription, answer } = await response.json();
+      
+      console.log(transcription);
+      console.log(answer);
+      
+      
       document.getElementById("loading").style.display = "none";
 
       const input = document.getElementById("transcribe");
 
-      typewriting("transcribe", transcription.text, function () {
+      typewriting("transcribe", transcription, function () {
         console.log("Typewriting completed."); // 在回调函数中执行其他语句
         speak(answer);
 
